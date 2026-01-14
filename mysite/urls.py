@@ -19,7 +19,7 @@ schema_view = get_schema_view(
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
-    path('', include('hotel_app.urls')),  # подключение роутов приложения
+    path('', include('hotel_app.urls')),
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('accounts/', include('allauth.urls')),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
